@@ -1,8 +1,5 @@
 import React from 'react'
 
-import { getUser } from '../actions/authentication';
-import store from '../store'
-
 function renderNone(loaded) {
   return <tr>
     <td colSpan={3}>
@@ -13,7 +10,7 @@ function renderNone(loaded) {
     </td>
   </tr>
 }
-//str.substring(1, 8);
+
 function renderEntries(newUser) {
   return newUser.map(user => <tr title={'Edit account info'} cellSpacing={0} key={user.id}>
     <td>{ user.id }</td>
@@ -41,7 +38,6 @@ export default function UserEntryTable({ newUser, loaded }) {
           newUser 
             ? renderEntries(newUser) 
             : renderNone(loaded)
-        //entries.length > 0 ? renderEntries(entries) : renderNone(loaded)
       }
     </tbody>
   </table>
