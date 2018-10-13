@@ -1,1 +1,1 @@
-# react-full-stack-jwt-auth
+React Full Stack Auth JWT (JSON Web Token) MongoDB Axios
